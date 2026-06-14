@@ -23,7 +23,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://ai-resume-analyzer-frontend.onrender.com',
+    'https://ai-resume-analyzer-frontend-an50.onrender.com',
     /\.onrender\.com$/  // allows all render subdomains
   ],
   credentials: true
