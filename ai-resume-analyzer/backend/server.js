@@ -19,7 +19,15 @@ const limiter = rateLimit({
 });
 
 // Middleware
-app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:3000'], credentials: true }));
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:3000',
+    'https://ai-resume-analyzer-frontend.onrender.com',
+    /\.onrender\.com$/  // allows all render subdomains
+  ],
+  credentials: true
+}));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use('/api', limiter);
